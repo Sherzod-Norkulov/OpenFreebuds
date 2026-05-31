@@ -4,6 +4,11 @@ openfreebuds (0.17.4-1) trixie noble questing; urgency=medium
 
   - [Feature] HUAWEI FreeBuds Pro 5 support (Sherzod Norkulov)
   - [Fix] Keep SPP-connected devices online when WinRT reports them disconnected
+  - [Fix] Portable build no longer crashes with FileNotFoundError when saving config
+  - [Feature] Restore the adaptive-transparency awareness level slider for Pro 5
+  - [Fix] Widen the side panel so the menu is not truncated
+  - [Fix] Don't show update notification when local version is newer than upstream
+  - [I18n] Complete Russian translations for Find device, Case sounds, Sound quality, gestures and other settings
 
  -- Sherzod Norkulov  Sun, 31 May 2026 14:00:00 +0000
 
