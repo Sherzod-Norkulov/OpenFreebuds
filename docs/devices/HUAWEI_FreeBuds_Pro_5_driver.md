@@ -4,6 +4,8 @@ This document describes how the FreeBuds Pro 5 driver is implemented inside
 OpenFreebuds and documents every Huawei SPP command it uses. It is intended for
 maintainers who want to understand, debug or extend the device support.
 
+> Author: **Sherzod Norkulov** (FreeBuds Pro 5 driver, handlers and live verification).
+
 The driver follows the same modular layout as every other Huawei device in the
 project: a thin per-model class wires together a list of reusable **handlers**,
 and each handler owns one feature (battery, ANC, gestures, …). No feature logic

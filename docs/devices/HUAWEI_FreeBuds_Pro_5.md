@@ -5,6 +5,8 @@ Protocol: Huawei SPP, port 1
 Product IDs: `00016B` / `ZAAW`, `00016D` / `ZAAV` (model `T0023`).
 Verified live against firmware HarmonyOS `6.1.0.272`.
 
+> Device support added and verified live by **Sherzod Norkulov**.
+
 > See [HUAWEI_FreeBuds_Pro_5_driver.md](HUAWEI_FreeBuds_Pro_5_driver.md) for the
 > full driver/protocol reference (every SPP command and how each handler works).
 
