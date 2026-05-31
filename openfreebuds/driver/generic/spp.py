@@ -27,6 +27,17 @@ class OfbDriverSppGeneric(OfbDriverGeneric):
             "last_start_error": self._last_start_error,
         }
 
+    async def is_device_online(self):
+        # Trust an active SPP session over the platform connection status.
+        # On Windows the WinRT connection_status may report DISCONNECTED for
+        # Dual-Connect capable devices (e.g. HUAWEI FreeBuds Pro 5) once their
+        # active audio is switched to another paired device, even though the
+        # SPP control channel stays fully usable. Without this fallback the
+        # manager would tear down a perfectly healthy driver.
+        if self.healthy():
+            return True
+        return await super().is_device_online()
+
     async def start(self):
         await self._close_transport()
         self._last_start_error = None
